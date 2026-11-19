@@ -1,5 +1,23 @@
+# Maven
 target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ
 .idea/
-.vscode/
 *.iml
+
+# VS Code / Eclipse
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# Sistema e logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Variaveis de ambiente
 .env
