@@ -19,6 +19,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          cache: maven
 
       - name: Configurar mirror do Maven
         run: |
@@ -37,3 +38,10 @@ jobs:
 
       - name: Build e testes
         run: mvn -B clean verify
+
+      - name: Publicar JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: bankapi-jar
+          path: target/*.jar
+          retention-days: 7
