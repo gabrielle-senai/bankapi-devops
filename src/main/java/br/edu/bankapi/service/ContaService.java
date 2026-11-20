@@ -27,7 +27,7 @@ public class ContaService {
         if (conta.getSaldo().compareTo(valor) < 0) {
             throw new IllegalArgumentException("Saldo insuficiente");
         }
-        conta.setSaldo(conta.getSaldo().add(valor));
+        conta.setSaldo(conta.getSaldo().subtract(valor));
         return repository.save(conta);
     }
 
